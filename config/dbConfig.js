@@ -5,6 +5,7 @@ async function connectMongoDB() {
 
     if(process.env.NODE_ENV === "production"){    
         mongoDbUrl = process.env.MONGO_URI_PROD;
+        console.log("mongurl:- ",mongoDbUrl);
     }else{
         mongoDbUrl = process.env.MONGO_URI_DEV;
     }
