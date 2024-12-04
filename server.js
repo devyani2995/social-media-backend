@@ -16,7 +16,8 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Allow requests from specific origin
-app.use(cors({ origin: 'http://localhost:3000' }));
+// app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors());
 
 // Or, allow requests from all origins (not recommended for production):
 // app.use(cors());
