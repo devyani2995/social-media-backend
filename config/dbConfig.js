@@ -3,10 +3,10 @@ const mongoose = require('mongoose');
 async function connectMongoDB() {
     let mongoDbUrl;
 
-    if(process.env.NODE_ENV === "development"){
-        mongoDbUrl = process.env.MONGO_URI_DEV;
-    }else{
+    if(process.env.NODE_ENV === "production"){    
         mongoDbUrl = process.env.MONGO_URI_PROD;
+    }else{
+        mongoDbUrl = process.env.MONGO_URI_DEV;
     }
     
     // MongoDB Connection
